@@ -91,7 +91,7 @@ Note: There are also internal throttling/threading controls (THREADS, REQUEST_DE
 ## Example quick command
 
 ```powershell
-python3 scan_web.py -u http://lpkia.ac.id --crawl-pages 4 --max-xss 12 --max-sqli 30 --timeout 6
+python3 scan_web.py -u http://unesco.com --crawl-pages 4 --max-xss 12 --max-sqli 30 --timeout 6
 ```
 
 If you want, I can now:
