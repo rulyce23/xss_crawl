@@ -94,9 +94,3 @@ Note: There are also internal throttling/threading controls (THREADS, REQUEST_DE
 python3 scan_web.py -u http://unesco.com --crawl-pages 4 --max-xss 12 --max-sqli 30 --timeout 6
 ```
 
-If you want, I can now:
-- expose `--threads` and `--delay` to the CLI,
-- implement a `--fast-scan` preset, or
-- add unit tests and a small test harness.
-
-Which would you like next?
